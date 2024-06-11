@@ -1,13 +1,101 @@
-body {
+.divs {
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+}
+:root {
+  --primaryColor : #90a959;
+  --secondColor: #e9b872;
+  --mainWhite: #fff;
+  --marinBlack: #222;
+  --mainRed: red;
+  --mainGreen: green;
+
+}
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: var(--secondColor);
+  color: var(--marinBlack);
+}
+h1 {
+  margin: 1rem 0;
+}
+.list {
+  list-style-type: none;
+  border: none;
+  padding: 0;
+}
+.item {
+  background-color: var(--mainWhite);
+  line-height: 1.5rem;
+  padding: 10px 20px;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s linear;
+}
+.item:hover {
+  width: 100%;
+  transform: scale(1.02);
+}
+.info {
+  flex: 0 0 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.expense {
+  margin-right: 2rem;
+}
+.amount {
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 1px 3px;
+}
+.clear-btn, .edit-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  outline: none;
+  cursor: pointer;
+}
+.clear-btn {
+  color: var(--mainRed);
+}
+.edit-btn {
+  color: var(--mainGreen);
+}
+
+.btn {
+  text-decoration: none;
+  color: var(--mainWhite);
+  background-color: var(--primaryColor);
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  outline: 0;
+  border: none;
+  border-radius: 2px;
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3 linear;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+.btn-icon {
+  font-size: 1.2rem;
 }
