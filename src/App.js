@@ -20,7 +20,7 @@ const App = () => {
   });
   const [edit, setEdit] = useState(false);
   const [id, setId] = useState('');
-
+ 
   const handleEdit = (id) => {
     const expense = expenses.find(expense => expense.id === id);
     const {charge, amount} = expense;
